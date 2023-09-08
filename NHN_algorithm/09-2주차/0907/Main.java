@@ -25,12 +25,10 @@ public class Main {
     // solution
     private static int solution(String str, String specificStr) {
         int count = 0;
-        char[] ch = str.toCharArray();
-
-        for (int i = 0; i < ch.length - specificStr.length() + 1; i++) {
+        for (int i = 0; i < str.length() - specificStr.length() + 1; i++) {
             boolean isEqual = true;
             for (int j = 0; j < specificStr.length(); j++) {
-                if (!(ch[i + j] == specificStr.charAt(j))) {
+                if (!(str.charAt(i + j) == specificStr.charAt(j))) {
                     isEqual = false;
                     break;
                 }
