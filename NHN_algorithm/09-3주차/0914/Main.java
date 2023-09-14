@@ -13,7 +13,7 @@ public class Main {
         private int denominator; // 분모
 
         public Fraction(int numerator, int denominator) {
-            if (denominator == 0 || numerator == 0) {
+            if (denominator == 0) {
                 throw new IllegalArgumentException("denominator is 0!!");
             }
             this.numerator = numerator;
@@ -70,8 +70,6 @@ public class Main {
 
         numerator = number.multiply(new BigDecimal(Math.pow(10, decimalNumber))).intValue();
         denominator = Math.pow(10, decimalNumber);
-
-        System.out.println("numerator : " + numerator + " denominator : " +denominator);
 
         return new Fraction(numerator, (int) denominator).toString();
     }
